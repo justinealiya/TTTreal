@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>TTT_2021</title>
+
+    <script src="sketch.js"></script>
+    <script src="logo.js"></script>
+    <script src="stuff.js"></script>
+    <script src="line.js"></script>
+    <script src="check.js"></script> 	
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  
+  <body id="bod1" onkeydown="keyHit_a()">
+  <input type="button" id="start" value="start" onclick="start()"></p>
+  <div id="div1">
+  <p id="par1"> Block1
+  <img id="img11" src="cowpic1.jpg" width="90" height="90">
+  <img id="img12" src="cowpic2.jpg" width="0" height="0">
+  <img id="img13" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par2"> Block2
+  <img id="img21" src="cowpic1.jpg" width="90" height="90">
+  <img id="img22" src="cowpic2.jpg" width="0" height="0">
+  <img id="img23" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par3"> Block3
+  <img id="img31" src="cowpic1.jpg" width="90" height="90">
+  <img id="img32" src="cowpic2.jpg" width="0" height="0">
+  <img id="img33" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par4"> Block4
+  <img id="img41" src="cowpic1.jpg" width="90" height="90">
+  <img id="img42" src="cowpic2.jpg" width="0" height="0">
+  <img id="img43" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par5"> Block5
+  <img id="img51" src="cowpic1.jpg" width="90" height="90">
+  <img id="img52" src="cowpic2.jpg" width="0" height="0">
+  <img id="img53" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par6"> Block6
+  <img id="img61" src="cowpic1.jpg" width="90" height="90">
+  <img id="img62" src="cowpic2.jpg" width="0" height="0">
+  <img id="img63" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par7"> Block7
+  <img id="img71" src="cowpic1.jpg" width="90" height="90">
+  <img id="img72" src="cowpic2.jpg" width="0" height="0">
+  <img id="img73" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par8"> Block8
+  <img id="img81" src="cowpic1.jpg" width="90" height="90">
+  <img id="img82" src="cowpic2.jpg" width="0" height="0">
+  <img id="img83" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  <p id="par9"> Block9
+  <img id="img91" src="cowpic1.jpg" width="90" height="90">
+  <img id="img92" src="cowpic2.jpg" width="0" height="0">
+  <img id="img93" src="cowpic3.jpg" width="0" height="0">
+  </p>
+  
+  </div>
+  
+  <div id="div2">
+  
+  <input type="button" id="but12"  value="Block1_Pic2" onclick="chgtoPic12(6)">
+  <input type="button" id="but13"  value="Block1_Pic3" onclick="chgtoPic13()">
+  <input type="button" id="but22"  value="Block2_Pic2" onclick="chgtoPic22(6)">
+  <input type="button" id="but23"  value="Block2_Pic3" onclick="chgtoPic23()">
+  <input type="button" id="but32"  value="Block3_Pic2" onclick="chgtoPic32(6)">
+  <input type="button" id="but33"  value="Block3_Pic3" onclick="chgtoPic33()">
+
+  <input type="button" id="but42"  value="Block4_Pic2" onclick="chgtoPic42(6)">
+  <input type="button" id="but43"  value="Block4_Pic3" onclick="chgtoPic43()">
+  <input type="button" id="but52"  value="Block5_Pic2" onclick="chgtoPic52(6)">
+  <input type="button" id="but53"  value="Block5_Pic3" onclick="chgtoPic53()">
+  <input type="button" id="but62"  value="Block6_Pic2" onclick="chgtoPic62(6)">
+  <input type="button" id="but63"  value="Block6_Pic3" onclick="chgtoPic63()">
+
+  <input type="button" id="but72"  value="Block7_Pic2" onclick="chgtoPic72(6)">
+  <input type="button" id="but73"  value="Block7_Pic3" onclick="chgtoPic73()">
+  <input type="button" id="but82"  value="Block8_Pic2" onclick="chgtoPic82(6)">
+  <input type="button" id="but83"  value="Block8_Pic3" onclick="chgtoPic83()">
+  <input type="button" id="but92"  value="Block9_Pic2" onclick="chgtoPic92(6)">
+  <input type="button" id="but93"  value="Block9_Pic3" onclick="chgtoPic93()">
+  <p id="demo">just playing</p>
+  </div>
+    
+</body>
+
+<script>let cell=[];
+let pic=[];
+for(let j=0;j<10;j++){pic[j]=[];}
+let pic11=document.getElementById("img11");
+let pic12=document.getElementById("img12");
+let pic13=document.getElementById("img13");
+let pic21=document.getElementById("img21");
+let pic22=document.getElementById("img22");
+let pic23=document.getElementById("img23");
+let pic31=document.getElementById("img31");
+let pic32=document.getElementById("img32");
+let pic33=document.getElementById("img33");
+
+let pic41=document.getElementById("img41");
+let pic42=document.getElementById("img42");
+let pic43=document.getElementById("img43");
+let pic51=document.getElementById("img51");
+let pic52=document.getElementById("img52");
+let pic53=document.getElementById("img53");
+let pic61=document.getElementById("img61");
+let pic62=document.getElementById("img62");
+let pic63=document.getElementById("img63");
+
+let pic71=document.getElementById("img71");
+let pic72=document.getElementById("img72");
+let pic73=document.getElementById("img73");
+let pic81=document.getElementById("img81");
+let pic82=document.getElementById("img82");
+let pic83=document.getElementById("img83");
+let pic91=document.getElementById("img91");
+let pic92=document.getElementById("img92");
+let pic93=document.getElementById("img93");
+
+let test=document.getElementById("but12");
+test.addEventListener("click",myFunc);
+let cnt=0;
+</script>
+ 
+
+</html>
